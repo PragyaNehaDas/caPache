@@ -4,21 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style.css">
-    <title>Document</title>
+    <title>Captcha Validator</title>
 </head>
 <body>
-    <div class="center">
-        <h1 id="captchaHeading">
-            Captcha Validator Using HTML, CSS and JavaScript
-        </h1>
-        <div id="captchaBackground">
+    <div class="container">
+        <h1 class="title">Captcha Validator</h1>
+        <div class="captcha-card">
             <canvas id="captcha">captcha text</canvas>
-            <input id="textBox" type="text" name="text">
-            <div id="buttons">
-                <input id="submitButton" type="submit">
-                <button id="refreshButton" type="submit">Refresh</button>
+            <div class="input-group">
+                <input id="textBox" type="text" placeholder="Enter captcha" autocomplete="off">
             </div>
-            <span id="output"></span>
+            <div class="button-group">
+                <button id="submitButton" class="btn primary">Verify</button>
+                <button id="refreshButton" class="btn secondary">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 4v6h-6M1 20v-6h6M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path></svg>
+                </button>
+            </div>
+            <div id="output" class="output"></div>
         </div>
     </div>
     <script src="script.js"></script>
